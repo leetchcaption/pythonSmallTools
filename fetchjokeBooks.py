@@ -20,7 +20,9 @@ def getHtml(baseUrl):
         pattern = re.compile(
             # r'<div class="author clearfix">[\s\S]*?<h2>(.*?)</h2>',re.S)
             #r'<div class="author clearfix">[\s\S]*?<h2>(.*?)</h2>[\s\S]*?<div class="content">([\s\S]*?)</div>',re.S)
-            r'<div class="author clearfix">[\s\S]*?<h2>(.*?)</h2>[\s\S]*?<div class="content">[\s\S]*?<span>([\s\S]*?)</span>[\s\S]*?<i class="number">(.*?)</i>',re.S)
+            r'<div class="author clearfix">[\s\S]*?<h2>(.*?)'
+            r'</h2>[\s\S]*?<div class="content">[\s\S]*?<span>([\s\S]*?)'
+            r'</span>[\s\S]*?<i class="number">(.*?)</i>',re.S)
 
         items = re.findall(pattern, html)
         for item in items:
