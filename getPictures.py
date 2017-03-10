@@ -44,14 +44,9 @@ def download(dir, url):
 
                 print("[Error]Can't download(%d): %s" % (idx + 1, img))
 
-
-def main():
-
+if __name__ == '__main__':
     dir = "D:\\workspace\\python\\Images"
     url = "http://www.58pic.com/yuanchuang/22782950.html"
     download(dir, url)
     print("Runing fine...")
-
-if __name__ == '__main__':
-    main()
 
